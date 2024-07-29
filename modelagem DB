@@ -1,0 +1,43 @@
+               --------------      Modeleagm DB      -----------------
+               
+               
+               
+-----seistema de atutenticão-----
+
+-Users
+--name
+--email
+--password
+
+-------------------------------
+
+
+-----sistema de publicação de ADS-----
+
+-Ads
+
+--title
+--category_id
+--price
+--isNegotiable
+--description
+
+              
+-Category
+
+--name
+--slug
+--image               
+
+-------------------------------------
+
+
+
+-----sistema de filtros--------
+
+States
+
+--name
+--slug
+
+-------------------------------
