@@ -2,8 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\User;
+use App\Models\Advertise;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class State extends Model
 {
@@ -13,4 +16,14 @@ class State extends Model
         'name',
         'slug'
     ];
+
+    public function advertises(): HasMany
+    {
+        return $this->hasMany(Advertise::class);
+    }
+
+    public function users(): HasMany
+    {
+        return $this->hasMany(User::class);
+    }
 }
