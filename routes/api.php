@@ -1,8 +1,10 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\StatesController;
+use App\Http\Controllers\CategoriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +21,10 @@ Route::get('/ping', function(): JsonResponse
 {
     return response()->json(['pong' => true]);
 });
+
+Route::get('/states', [StatesController::class, 'index']);
+Route::get('/categories', [CategoriesController::class, 'index']);
+
+Route::post('/user/signup', [UserController::class, 'signup']);
+Route::post('/user/signin', [UserController::class, 'signin']);
+Route::post('/user/me', [UserController::class, 'me']);
