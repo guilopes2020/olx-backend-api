@@ -25,6 +25,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'state_id'
     ];
 
     /**
@@ -46,7 +47,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function states(): BelongsTo
+    public function state(): BelongsTo
     {
         return $this->belongsTo(State::class);
     }
